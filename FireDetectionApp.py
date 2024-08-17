@@ -10,12 +10,12 @@ from streamlit_shap import st_shap
 
 # Load the dataset (assuming it's in the same directory)
 df = pd.read_csv("dataset.csv")
-
-# Preprocessing
-X = df.drop("Fire Alarm", axis=1)
 df = df.drop("Index", axis=1)
 df = df.drop("UTC", axis=1)
 df = df.drop("CNT", axis=1)
+
+# Preprocessing
+X = df.drop("Fire Alarm", axis=1)
 y = df['Fire Alarm']
 
 # Train-test split
